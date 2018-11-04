@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
 
-    ProductDAO productDAO = new JDBCProductDAO();
+    private ProductDAO productDAO = new JDBCProductDAO();
     @Override
     public Product getById(int id) {
         return productDAO.getById(id);
@@ -22,5 +22,15 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getAll() {
         return productDAO.getAll();
+    }
+
+    @Override
+    public void delete(int id) {
+        productDAO.delete(id);
+    }
+
+    @Override
+    public void update(Product product) {
+        productDAO.update(product);
     }
 }

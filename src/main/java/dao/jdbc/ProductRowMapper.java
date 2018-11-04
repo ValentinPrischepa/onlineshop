@@ -5,7 +5,7 @@ import entity.Product;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ProductRowMapper {
+class ProductRowMapper {
     Product getProduct(ResultSet resultSet) throws SQLException {
         Product product = new Product();
         product.setId(resultSet.getInt("id"));

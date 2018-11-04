@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addproduct</title>
+</head>
+<body>
+<h1 align="center">Add New Product</h1>
+
+<form action="/product/edit?id=${product.id}" method="POST">
+    Product Name:
+    <p><input type="text" name="productName" value="${product.name}"/></p>
+    Product Price:
+    <p><input type="text" name="productPrice" value="${product.price}"/></p>
+    Product Image Path:
+    <p><input type="text" name="productImage" value="${product.image}"/></p>
+    <p><input type="submit" value="Save Product"></p></form>
+</form>
+<p><a href="/allproducts">All Products</a></p>
+</body>
+</html>

@@ -5,7 +5,7 @@ import service.ProductService;
 import service.ProductServiceImpl;
 import web.templater.PageGenerator;
 
-import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class AddProductServlet extends HttpServlet {
 
-    ProductService productService = new ProductServiceImpl();
+    private ProductService productService = new ProductServiceImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
 
@@ -29,7 +29,7 @@ public class AddProductServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         PageGenerator pageGenerator = PageGenerator.instance();
         HashMap<String, Object> params = new HashMap<>();
         String page = pageGenerator.getPage("addproduct.html",params);

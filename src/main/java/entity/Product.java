@@ -1,7 +1,6 @@
 package entity;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 public class Product {
     private int id;
